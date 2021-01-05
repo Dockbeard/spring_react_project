@@ -1,0 +1,14 @@
+{
+  "name": "DashBoard",
+  "version": "1.0.0",
+  "description": "",
+  "scripts": {
+    "install": "cd client && npm install && cd ..",
+    "client": "cd client && npm start",
+    "server": "cd server && gradlew bootRun",
+    "start": "concurrently \"npm run server\" \"npm run client\""
+  },
+  "dependencies": {
+    "concurrently": "^5.3.0"
+  }
+}
