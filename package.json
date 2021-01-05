@@ -5,10 +5,18 @@
   "scripts": {
     "install": "cd client && npm install && cd ..",
     "client": "cd client && npm start",
-    "server": "cd server && gradlew bootRun",
+    "server": "cd server && ./gradlew bootRun",
     "start": "concurrently \"npm run server\" \"npm run client\""
   },
   "dependencies": {
-    "concurrently": "^5.3.0"
+<<<<<<< HEAD
+    "concurrently": "^5.3.0",
+=======
+    "bootstrap": "^4.5.3",
+    "concurrently": "^5.3.0",
+    "jquery": "^3.5.1",
+    "react-bootstrap": "^1.4.0",
+>>>>>>> 7a7dcce8c5adb8b7f5e972526df3e3da1832d8fc
+    "react-router-dom": "^5.2.0"
   }
 }

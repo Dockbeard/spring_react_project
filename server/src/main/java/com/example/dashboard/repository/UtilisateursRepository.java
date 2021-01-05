@@ -1,11 +1,19 @@
 package com.example.dashboard.repository;
 
-import java.util.List;
-import org.springframework.data.jpa.repository.JpaRepository;
-import com.example.dashboard.model.Utilisateurs;
+import org.springframework.data.repository.CrudRepository;
 
-public interface UtilisateursRepository extends JpaRepository<Utilisateurs, Long> {
-    List<Utilisateurs> findByUser(String User);
+import java.util.Optional;
 
-    List<Utilisateurs> findByPassword(String Password);
+import com.example.dashboard.model.Users;
+
+public interface UtilisateursRepository extends CrudRepository<Users, Integer> {
+    Users findByMail(String mail);
+
+    Users findById(int id);
+
+    Optional<Users> findOById(int id);
+
+    void deleteById(int id);
+
+    void deleteByMail(String mail);
 }
